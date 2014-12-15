@@ -13,46 +13,46 @@
   <!-- Stylesheets -->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="/assets/css/styles.css" type="text/css"/>
-	
+  <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/assets/css/styles.css" type="text/css"/>
+  
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if IE]>
-	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 
 <body>
   <header id="header">
     <div class="container">
-			<div class="row">
-				<div class="col-md-10">
-					<h1>alfonso pérez</h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<h4>ingeniero de software y buen tío en general</h4>
-				</div>
-			</div>
+      <div class="row">
+        <div class="col-md-10">
+          <h1>alfonso pérez</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h4>ingeniero de software y buen tío en general</h4>
+        </div>
+      </div>
     </div>
   </header>
 
-	<section id="content">
-		<div class="container">
+  <section id="content">
+    <div class="container">
       <div class="row">
-				<div class="col-md-12 text-right">
+        <div class="col-md-12 text-right">
           <a href="/index.html">Volver</a>
         </div>
       </div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="section-title">
-						<h2>Cruce de contextos</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="section-title">
+            <h2>Cruce de contextos</h2>
             <p><i>05/04/2014</i></p>
-					</div>
-					<p>En su esencia más básica, el desarrollo de software consiste en dar forma al caos aparente en el que se mueven los usuarios. Dado que este dominio suele ser tremendamente complejo, trabajamos mediante abstracciones, o dicho de otro modo, acotamos el domino hasta tener un contexto manejable. Eric Evans lo define perfectamente en su libro “Domain Driven Design” con el término <i>bounded context</i>, que significa literalmente contexto acotado. Hasta aquí todo bien. El problema llega cuando intentamos aplicar una de los principios básicos del desarrollo de software, la reutilización, entre distintos contextos.</p>
+          </div>
+          <p>En su esencia más básica, el desarrollo de software consiste en dar forma al caos aparente en el que se mueven los usuarios. Dado que este dominio suele ser tremendamente complejo, trabajamos mediante abstracciones, o dicho de otro modo, acotamos el domino hasta tener un contexto manejable. Eric Evans lo define perfectamente en su libro “Domain Driven Design” con el término <i>bounded context</i>, que significa literalmente contexto acotado. Hasta aquí todo bien. El problema llega cuando intentamos aplicar una de los principios básicos del desarrollo de software, la reutilización, entre distintos contextos.</p>
           <p>Supongamos que queremos reutilizar algunos componentes para representar entidades comunes entre dos dominios, como, por ejemplo, los usuarios de un sistema. Ya que es algo tan genérico, parece lógico extraer el código de algún proyecto anterior e incluirlo en nuestro nuevo proyecto. Sin embargo, al indagar un poco más descubrimos que los usuarios funcionan y se relacionan con su entorno de modo distinto en ambos dominios. Resulta que la clase de usuario genérica no es tan genérica como pensábamos, sino que su comportamiento varía según el contexto en que se utiliza. Ergo, si queremos reutilizar nuestro modelo de usuarios, hemos de adaptarlo forzosamente al contexto de nuestro nuevo proyecto. Se ha producido un cruce de contextos.</p>
           <p class="well">Se produce un cruce de contextos cuando empleamos la implementación de una entidad perteneciente a un contexto para representar una entidad homónima en otro contexto distinto, siendo el comportamiento y las relaciones de dichas entidades dependientes del dominio.</p>
           <p>Si descartamos modificar el código directamente [1], el método más obvio de adaptación es la herencia. En el 90% de las ocasiones, esto es un camino seguro a la condenación. La herencia está muy bien sobre el papel, pero en la práctica es fácil perder el control de la jerarquía, lo que suele tener consecuencias apocalípticas. Los cambios realizados en una clase de la jerarquía afectan sí o sí a las clases inferiores, rompiendo la encapsulación de las mismas y provocando a veces efectos indeseados. Además, dependiendo de las diferencias en el comportamiento de la entidad en los distintos dominios, podemos encontrarnos con que se está heredando funcionalidad innecesaria, obligando a la subclase a "rechazar" la interfaz de la clase padre (mal asunto) [2]. Por tanto, como norma general, es mejor evitar las jerarquías salvo que estemos muy seguros de lo que hacemos.</p>
@@ -63,18 +63,18 @@
           <p><strong>Notas:</strong></p>
           <p>[1] Muchas veces no tendremos acceso al código de los componentes que queremos reutilizar, y aún cuando fuese posible modificar dicho código, no es en absoluto recomendable.</p>
           <p>[2] Estos son algunos de los motivos que fundamentan el principio conocido de favorecer la composición sobre la herencia.</p>
-				</div>
+        </div>
       </div>
-		</div>
-	</section>
+    </div>
+  </section>
 
   <footer id="footer">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-					<p>Copyright © 2014 Alfonso Pérez</p>
-				</div>
-			</div>
+          <p>Copyright © 2014 Alfonso Pérez</p>
+        </div>
+      </div>
     </div>
   </footer>
 </body>
