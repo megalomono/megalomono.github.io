@@ -1,0 +1,13 @@
+# Site settings
+title: alfonso perez
+email: fonsopp@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Este es mi bloc de notas particular. No garantizo
+  coherencia, así que lee bajo tu cuenta y riesgo.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://alfonso-perez.com" # the base hostname & protocol for your site
+github_username:  megalomono
+
+# Build settings
+markdown: kramdown
+paginate: 5

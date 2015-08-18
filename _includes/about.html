@@ -1,0 +1,22 @@
+<div class="about">
+  <!--
+  <div class="text-center">
+    <a class="page-link" href="{{ "/profile" | prepend: site.baseurl }}" title="Yo">
+      <img src="{{ "/img/me.jpg" | prepend: site.baseurl }}" width="230" alt="Yo" class="img-responsive">
+    </a>
+  </div>
+  <br/>
+  -->
+  <h4>Acerca de</h4>
+  <p class="text-left">{{ site.description }}</p>
+  <ul>
+    {% if site.github_username %}
+    <li>
+      <a href="https://github.com/{{ site.github_username }}" title="Github"><i class="fa fa-github fa-lg"></i> Github</a>
+    </li>
+    {% endif %}
+    <li><a href="mailto:{{ site.email }}" title="Email"><i class="fa fa-envelope-o"></i> E-mail</a></li>
+    <li><a class="page-link" href="{{ "/profile" | prepend: site.baseurl }}" title="Sobre mí"><i class="fa fa-info-circle fa-lg"></i> Sobre mí</a></li>
+    <li><a class="page-link" href="{{ "/feed.xml" | prepend: site.baseurl }}" title="feed"><i class="fa fa-rss fa-lg"></i> Feed</a></li>
+  </ul>
+</div>

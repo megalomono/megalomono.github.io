@@ -1,0 +1,183 @@
+/**
+ * Site header
+ */
+.site-header {
+    border-top: 5px solid $grey-color-dark;
+    border-bottom: 1px solid $grey-color-light;
+    min-height: 56px;
+
+    // Positioning context for the mobile navigation icon
+    position: relative;
+}
+
+.site-title {
+    line-height: 56px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+}
+
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    padding: $spacing-unit 0;
+    font-size: 15px;
+}
+
+/**
+ * About
+ */
+.about {
+    color: $grey-color;
+    font-size: 16px;
+    //font-weight: bold;
+    padding: 1em;
+
+    ul {
+        margin-left: 0;
+        list-style: none;
+        > li {
+            margin-bottom: 5px;
+        }
+        a {
+            color: $grey-color;
+            text-decoration: none;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+/**
+ * Page content
+ */
+h3 {
+    border-bottom: 1px dotted;
+}
+ 
+.page-content {
+    padding: $spacing-unit 0;
+}
+
+.post-list {
+    margin-left: 0;
+    padding-right: 10px;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+}
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+    
+    > p:first-child {
+        color: darkkhaki;
+        font-size: 22px;
+    }
+}
+
+/*
+ * Profile
+ */
+.timeline {
+    padding: 5px 0;
+
+    > ul {
+        padding: 0;
+        list-style: none;
+        margin: 0 15px 0 30px;
+        border-left: 2px solid #ddd;
+        
+        > li {
+            padding: 5px 15px;
+            display: block;
+            min-height: 54px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            margin: 20px 0 20px 40px;
+            background: #efefef;
+            position: relative;
+            border-left: 4px solid transparent;
+
+            &:before {
+                width: 10px;
+                height: 10px;
+                border-style: solid;
+                content: " ";
+                position: absolute;
+                left: -14px;
+                top: 19px;
+                border-width: 7.5px 8px 7.5px 0;
+                border-color: transparent #efefef transparent transparent;
+                display: block;
+            }
+            
+            > .date {
+                position: absolute;
+                left: -74px;
+                top: -5px;
+                width: 60px;
+                height: 60px;
+                background: darkkhaki;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 130%;
+                > span {
+                    color: #fff;
+                    font-size: 18px;
+                    display: block;
+                    margin-top: -5px;
+                }
+                > small {
+                    color: #fff;
+                    font-size: 12px;
+                    display: block;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+.technologies {
+    margin-bottom: 10px;
+    > ul {
+        margin: 0;
+        list-style: none;    
+        > li {
+            display: inline;
+            margin-right: 10px;
+        }
+    }
+}
