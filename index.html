@@ -5,11 +5,11 @@ layout: default
   {% for post in paginator.posts %}
     <li>
       <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
-      <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
+      <h2>{{ post.title }}</h2>
     </li>
     {{ post.excerpt }}
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Seguir leyendo...</a>
+    <br/>
   {% endfor %}
 </ul>
 
