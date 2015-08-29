@@ -2,6 +2,7 @@
 layout: post
 title: "Búsquedas avanzadas en MongoDB"
 date: 2015-08-13
+tags: NoSQL MongoDB
 ---
 Las funciones de búsqueda de MongoDB van más allá de filtrar los documentos de una colección por
 los valores de sus campos simples; también es posible filtrar por arrays y documentos anidados,

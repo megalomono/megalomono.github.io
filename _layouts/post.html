@@ -12,4 +12,10 @@ layout: default
     {{ content }}
   </article>
 
+  <div>
+    <strong>Etiquetas:</strong> 
+    {% for tag in page.tags %}
+      <a href="/tags/{{ tag }}/">{{ tag }}</a>
+    {% endfor %}
+  </div>
 </div>

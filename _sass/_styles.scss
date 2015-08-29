@@ -37,9 +37,8 @@
 .about {
     color: $grey-color;
     font-size: 16px;
-    //font-weight: bold;
-    padding: 1em;
-
+    margin-bottom: $spacing-unit;
+    
     ul {
         margin-left: 0;
         list-style: none;
@@ -57,6 +56,23 @@
 }
 
 /**
+ * Tag cloud
+ */
+.tagcloud {
+    margin-bottom: $spacing-unit;
+    
+    h4 {
+        color: $grey-color;
+    }
+}
+
+hr {
+    border-top: 1px solid;
+    border-bottom: none;
+    margin-bottom: $spacing-unit;
+}
+
+/**
  * Page content
  */
 h3 {
@@ -71,10 +87,6 @@ h3 {
     margin-left: 0;
     padding-right: 10px;
     list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
 }
 
 .post-meta {
@@ -103,7 +115,7 @@ h3 {
     
     > p:first-child {
         color: darkkhaki;
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 

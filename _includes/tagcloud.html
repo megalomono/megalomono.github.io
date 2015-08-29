@@ -1,0 +1,10 @@
+<div class="tagcloud">
+  <h4>Etiquetas</h4>
+  {% for tag in site.tags %}
+    <span style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size  | plus: 70 }}%">
+      <a href="/tags/{{ tag | first | slugize }}/">
+        {{ tag | first }}
+      </a>
+    </span>
+  {% endfor %}
+</div>

@@ -2,6 +2,7 @@
 layout: post
 title: "Múltiples filtros de seguridad con SpringBoot"
 date: 2015-07-02
+tags: Spring
 ---
 En una aplicación web típica suelen realizarse dos tipos de peticiones: las que recargan la página
 completa y las peticiones AJAX. Estas dos variantes requieren un control de seguridad distinto, ya que

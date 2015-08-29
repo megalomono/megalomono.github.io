@@ -1,0 +1,12 @@
+---
+layout: default
+permalink: /tags/Spring/
+---
+<ul class="post-list">
+  {% for post in site.tags.Spring %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><h4>{{ post.title }}</h4></a>
+    </li>
+  {% endfor %}
+</ul>
