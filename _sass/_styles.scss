@@ -37,7 +37,7 @@
 .about {
     color: $grey-color;
     font-size: 16px;
-    margin-bottom: $spacing-unit;
+    margin: $spacing-unit 0;
     
     ul {
         margin-left: 0;
@@ -59,7 +59,7 @@
  * Tag cloud
  */
 .tagcloud {
-    margin-bottom: $spacing-unit;
+    margin: $spacing-unit 0;
     
     h4 {
         color: $grey-color;
@@ -67,9 +67,9 @@
 }
 
 hr {
-    border-top: 1px solid;
+    border-top: 1px solid $grey-color-light;
     border-bottom: none;
-    margin-bottom: $spacing-unit;
+    margin: $spacing-unit 0;
 }
 
 /**

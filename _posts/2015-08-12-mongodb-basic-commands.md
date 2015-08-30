@@ -2,7 +2,7 @@
 layout: post
 title: "Comandos básicos para MongoDB"
 date: 2015-08-12
-tags: NoSQL MongoDB
+tags: MongoDB
 ---
 MongoDB es una base de datos no relacional basada en documentos. Esto significa que almacena la
 información como colecciones de documentos, concretamente documentos en formato JSON. El modo más

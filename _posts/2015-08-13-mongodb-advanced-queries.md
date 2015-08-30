@@ -2,7 +2,7 @@
 layout: post
 title: "Búsquedas avanzadas en MongoDB"
 date: 2015-08-13
-tags: NoSQL MongoDB
+tags: MongoDB
 ---
 Las funciones de búsqueda de MongoDB van más allá de filtrar los documentos de una colección por
 los valores de sus campos simples; también es posible filtrar por arrays y documentos anidados,
@@ -42,7 +42,7 @@ Por ejemplo, para listar a los rebeldes de nuestra colección ordenados por nomb
 descendente se haría lo siguiente:
 
 {% highlight javascript %}
-> db.rebels.find({}, { "-id" : false, "name" : true }).sort({ "name" : -1 })
+> db.rebels.find({}, { "_id" : false, "name" : true }).sort({ "name" : -1 })
 { "name" : "Yoda" }
 { "name" : "Obi-Wan Kenobi" }
 { "name" : "Luke Skywalker" }
@@ -56,7 +56,7 @@ Para limitar el número de resultados devueltos por una consulta se emplea la fu
 función recibe como parámetro el número de resultados que se desean obtener.
 
 {% highlight javascript %}
-> db.rebels.find({}, { "-id" : false, "name" : true }).sort({ "name" : -1 }).limit(2)
+> db.rebels.find({}, { "_id" : false, "name" : true }).sort({ "name" : -1 }).limit(2)
 { "name" : "Yoda" }
 { "name" : "Obi-Wan Kenobi" }
 {% endhighlight %}
@@ -67,7 +67,7 @@ Para omitir 'n' resultados de una consulta se emplea la función *skip()*. Esta 
 parámetro el número de resultados que se desean omitir.
 
 {% highlight javascript %}
-> db.rebels.find({}, { "-id" : false, "name" : true }).sort({ "name" : -1 }).skip(2)
+> db.rebels.find({}, { "_id" : false, "name" : true }).sort({ "name" : -1 }).skip(2)
 { "name" : "Luke Skywalker" }
 { "name" : "Han Solo" }
 { "name" : "Chewbacca" }
@@ -76,7 +76,7 @@ parámetro el número de resultados que se desean omitir.
 Las funciones *limit()* y *skip()* se pueden combinar para acotar el resultado de la consulta:
 
 {% highlight javascript %}
-> db.rebels.find({}, { "-id" : false, "name" : true }).sort({ "name" : -1 }).skip(2).limit(2)
+> db.rebels.find({}, { "_id" : false, "name" : true }).sort({ "name" : -1 }).skip(2).limit(2)
 { "name" : "Luke Skywalker" }
 { "name" : "Han Solo" }
 {% endhighlight %}
