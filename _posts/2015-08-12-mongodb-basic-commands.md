@@ -33,6 +33,9 @@ La función *insert()* acepta como parámetro un objeto JSON, así que seria pos
 > db.rebels.insert(obiwan)
 {% endhighlight %}
 
+Si no se indica explícitamente, MongoDB establece por defecto un atributo "_id" al realizar la inserción.
+Este atributo es único e inmutable y es empleado como clave primaria.
+
 ###Búsquedas
 
 Para recuperar un documento insertado hay dos opciones. La primera es utilizar la función *findOne()*,
@@ -56,14 +59,14 @@ recuperar el rebelde cuyo nombre es "Han Solo" y mostrar su nave espacial, la co
 { "spaceship" : "Millenium Falcon" }
 {% endhighlight %}
 
-Por defecto, Mongo devuelve siempre el campo "_id" del documento, salvo que se le especifique lo
-contrario.
+El primer argumento indica que se filtre el resultado por el atributo "name" cuyo valor sea "Han Solo", mientras que
+el segundo argumento indica que campos devolver mediante **true** o **false**. Cabe resaltar que, por defecto,
+MongoDB devuelve siempre el campo "_id" del documento salvo que se indique lo contrario explícitamente.
 
-La otra opción para recuperar los documentos de una colección es emplear la función *find()*. Una llamada sin
-parámetros a esta función devuelve todos los documentos de una colección. Por defecto, Mongo Shell recupera
-los documentos en lotes, avanzando al siguiente lote por demanda explícita del usuario mediante el
-comando *it*. Dado que Mongo mantiene un cursor abierto hasta que se termina de recuperar la colección,
-hacer esto no suele ser buena idea. No obstante, la opción está ahí.
+La otra opción para recuperar los documentos de una colección es emplear la función *find()*. La principal diferencia
+entre *findOne()* y *find()* es que la primera devuelve un documento, mientras que la segunda devuelve un cursor sobre
+el que se puede iterar para leer los resutados de la consulta. Por defecto, MongoDB mantiene el cursor abierto hasta que se
+finalice la lectura sobre la colección o hasta que pasen 10 minutos de inactividad.
 
 La función *find()* admite los mismos parámetros que la función *findOne()*, de modo que se pueden filtrar
 los resultados y proyectar los campos que se desee recuperar.
@@ -124,18 +127,17 @@ Con la primera opción, *update()* remplaza todos los campos del documento por l
 el documento a todos los efectos (a excepción del campo "_id", que es inmutable).
 
 {% highlight javascript %}
-> db.rebels.update({ "name" : "Luke Skywalker" }, { "name" : "Luke Skywalker", "affiliation" : "Light side" })
+> db.rebels.update({ "name" : "Luke Skywalker" }, { "affiliation" : "Dark side" })
 > db.rebels.find({ "name" : "Luke Skywalker"} ).pretty()
 {
     "_id" : ObjectId("55cb8670519cca29dcba3a0"),
-    "name" : "Luke Skywalker",
     "affiliation" : "Light side"
 }
 {% endhighlight %}
 
-Con esta consulta se ha actualizado a Luke Skywalker y ahora está en el lado de la luz, pero por el camino ha perdido su
-nave. Para mantener toda la información anterior habría que añadir a la consulta de modificación todos y cada uno de los
-campos del documento, sufran o no cambios. Por motivos obvios, esto es poco práctico.
+Con esta consulta se ha actualizado a Luke Skywalker y ahora está en el Lado Oscuro, pero por el camino se ha perdido el
+resto de su información. Para mantener toda la información anterior habría que añadir a la consulta de modificación todos y
+cada uno de los campos del documento, sufran o no cambios. Por motivos obvios, esto es poco práctico.
 
 Para evitar este problema existe el segundo modo de ejecutar la función, que es básicamente igual a lo anterior pero con
 una pequeña modificación que consiste en el uso del operador *$set*. Por ejemplo, para que Luke se pase al lado oscuro,
@@ -151,8 +153,8 @@ pero sin perder nada con el cambio, bastaría con lo siguiente:
 }
 {% endhighlight %}
 
-Este último método es mucho más práctico y seguro, ya que no es necesario conocer y propagar todos los campos de un documento
-para conservar su información.
+De esta forma se le indica a MongoDB que únicamente debe actualizar el campo "affiliation". Este último método es mucho más
+práctico y seguro, ya que no es necesario conocer y propagar todos los campos de un documento para conservar su información.
 
 Se puede eliminar un campo que ya no sea necesario ejecutando la función *update()* con el operador *$unset* e indicando
 los campos a eliminar.
