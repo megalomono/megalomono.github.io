@@ -60,7 +60,7 @@ recuperar el rebelde cuyo nombre es "Han Solo" y mostrar su nave espacial, la co
 {% endhighlight %}
 
 El primer argumento indica que se filtre el resultado por el atributo "name" cuyo valor sea "Han Solo", mientras que
-el segundo argumento indica que campos devolver mediante **true** o **false**. Cabe resaltar que, por defecto,
+el segundo argumento indica qué campos devolver mediante **true** o **false**. Cabe resaltar que, por defecto,
 MongoDB devuelve siempre el campo "_id" del documento salvo que se indique lo contrario explícitamente.
 
 La otra opción para recuperar los documentos de una colección es emplear la función *find()*. La principal diferencia
