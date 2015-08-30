@@ -37,7 +37,11 @@
 .about {
     color: $grey-color;
     font-size: 16px;
-    margin: $spacing-unit 0;
+    margin-bottom: $spacing-unit;
+    
+    h4 {
+        border-bottom: 1px dotted;
+    }
     
     ul {
         margin-left: 0;
@@ -59,9 +63,10 @@
  * Tag cloud
  */
 .tagcloud {
-    margin: $spacing-unit 0;
+    margin-bottom: $spacing-unit;
     
     h4 {
+        border-bottom: 1px dotted;
         color: $grey-color;
     }
 }
@@ -101,6 +106,10 @@ h3 {
 /**
  * Posts
  */
+.post {
+    margin-bottom: $spacing-unit;
+}
+ 
 .post-header {
     margin-bottom: $spacing-unit;
 }
