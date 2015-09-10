@@ -57,7 +57,7 @@ myrs:PRIMARY>
 Mediante el comando *rs.status()* se puede ver el estado del conjunto de réplicas.
 
 {% highlight javascript %}
-m101:PRIMARY> rs.status()
+myrs:PRIMARY> rs.status()
 {
 	"set" : "myrs",
 	"date" : ISODate("2015-09-10T19:00:15.859Z"),
