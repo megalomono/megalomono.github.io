@@ -1,42 +1,23 @@
 ---
 layout: default
 ---
-<ul class="post-list">
-  {% for post in paginator.posts %}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><h2>{{ post.title }}</h2></a>
-    </li>
-    <article class="post-content">
-      {{ post.content }}
-    </article>
-    <hr/>
-  {% endfor %}
-</ul>
-
-<!-- Pagination links -->
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Anterior</a>
-  {% else %}
-    <span>&laquo; Anterior</span>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Siguiente &raquo;</a>
-  {% else %}
-    <span>Siguiente &raquo;</span>
-  {% endif %}
+<div class="row top-margin">
+  <div class="col-md-6 col-md-offset-3">
+    {% include header.html %}
+    <p  class="text-justify">
+        Este es <a class="page-link" href="{{ "/articles" | prepend: site.baseurl }}" title="Blog">mi bloc de notas</a> particular.
+        No garantizo coherencia, así que lee bajo tu cuenta y riesgo.
+    </p>
+    <p  class="text-justify">
+      Actualmente trabajo como ingeniero de software para <a href="http://www.healthincode.com/">Health In Code</a> en A Coruña.
+      En mi tiempo libre me dedico a practicar artes marciales y a trastear en
+      <a href="https://github.com/{{ site.github_username }}" title="Github">mis propios proyectos</a>.
+    </p>
+    <p class="text-justify">
+      Si por algún motivo quieres ponerte en contacto conmigo puedes escribirme a mi cuenta 'fonsopp' de gmail.
+      Aunque tengo perfil en algunas redes sociales mi actividad es nula, así que si por casualidad me encuentras en alguna
+      de ellas no la utilices como medio de contacto si esperas respuesta en algún momento.
+    </p>
+    {% include footer.html %}
+  </div>
 </div>
-{% endif %}

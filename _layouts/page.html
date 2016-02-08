@@ -1,14 +1,10 @@
 ---
 layout: default
 ---
-<div>
-
-  <header class="post-header">
-    <h2 class="post-title">{{ page.title }}</h2>
-  </header>
-
-  <article>
+<div class="row top-margin">
+  <div class="col-md-6 col-md-offset-3">
+    {% include header.html %}   
     {{ content }}
-  </article>
-
+    {% include footer.html %}
+  </div>
 </div>
