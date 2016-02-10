@@ -10,7 +10,7 @@ el formato deseado.
 
 La referencia detallada de Markdown puede verse [aquí](http://daringfireball.net/projects/markdown/).
 
-###Cabeceras
+### Cabeceras
 
 Se marcan un número de almohadillas igual al número de encabezado. Es decir:
 
@@ -20,7 +20,7 @@ generará el tag
 
     <h1>Esto es un encabezado</h1>
 
-###Énfasis
+### Énfasis
 
 Para marcar una palabra en *cursiva* se emplea *. Así el siguiente texto:
 
@@ -38,7 +38,7 @@ se convierte en:
 
     Esto es una <strong>palabra</strong> en negrita
     
-###Listas
+### Listas
 
 Una lista ordenada se crea con la siguiente sintaxis:
 
@@ -68,7 +68,7 @@ generará:
         <li>Tres</li>
     </ul>
     
-###Código
+### Código
 
 Para incluir código en el texto se puede emplear la doble tilde izquierdo `` o una tabulación.
 
@@ -88,7 +88,7 @@ se convierte en
       
     <pre><code>Esto es código</code></pre>
     
-###Links
+### Links
 
 Para crear un link se emplea la notación ``[nombre](url)``. De este modo:
 

@@ -15,7 +15,7 @@ a la base de datos y que tiene como propiedades cada una de las colecciones de l
 existe ningún lenguaje intermedio del estilo de SQL para operar sobre los datos; todas las operaciones
 en MongoDB son llamadas a funciones sobre una colección.
 
-###Inserciones
+### Inserciones
 
 Para insertar un nuevo documento en una colección se emplearía la función *insert()*. Si la colección no
 existiese, MongoDB la crearía.
@@ -36,7 +36,7 @@ La función *insert()* acepta como parámetro un objeto JSON, así que seria pos
 Si no se indica explícitamente, MongoDB establece por defecto un atributo "_id" al realizar la inserción.
 Este atributo es único e inmutable y es empleado como clave primaria.
 
-###Búsquedas
+### Búsquedas
 
 Para recuperar un documento insertado hay dos opciones. La primera es utilizar la función *findOne()*,
 que devuelve el primer documento de la colección que cumple los criterios de búsqueda:
@@ -116,7 +116,7 @@ comporta de forma análoga a *find()*:
 5
 {% endhighlight %}
 
-###Actualizaciones
+### Actualizaciones
 
 A la hora de actualizar un documento MongoDB ofrece la función *update()*. Esta función puede usarse de dos maneras:
 o bien para realizar una modificación de todo el documento, o bien para modificar solo determinados campos.
@@ -180,7 +180,7 @@ Es importante tener en cuenta que la función *update()* **afecta únicamente al
 búsqueda**. Para realizar una modificación que afecte a todos los registros que coincidan con las condiciones de filtrado es
 necesario añadir la opción *multi: true*.
 
-###Borrados
+### Borrados
 
 Finalmente, para completar el conjunto de operaciones CRUD, existe la opción de borrar un documento. Para esto existe la
 función *remove()*.
@@ -202,7 +202,7 @@ true
 0
 {% endhighlight %}
 
-###Conclusión
+### Conclusión
 
 Las funciones aquí mostradas cubren las necesidades básicas de cualquier base de datos: inserciones, lecturas, modificaciones y
 borrados. Obviamente, existe la posibilidad de ejecutar operaciones más avanzadas. Se puede obtener más información sobre

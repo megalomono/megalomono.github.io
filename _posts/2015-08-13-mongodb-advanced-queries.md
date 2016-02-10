@@ -33,7 +33,7 @@ Es importante tener en cuenta que estas operaciones se realizan en el servidor y
 implica que **cualquier modificación sobre el cursor debe realizarse antes de recuperar ningún resultado**,
 ya que los cambios no podrían aplicarse a colecciónes ya recuperadas.
 
-###Ordenación
+### Ordenación
 
 Para ordenar el resultado de una consulta se emplea la función *sort()*. Esta función recibe como
 parámetro un documento JSON indicando los campos para la ordenación y el sentido de la misma.
@@ -50,7 +50,7 @@ descendente se haría lo siguiente:
 { "name" : "Chewbacca" }
 {% endhighlight %}
 
-###Limitar el número de resultados
+### Limitar el número de resultados
 
 Para limitar el número de resultados devueltos por una consulta se emplea la función *limit()*. Esta
 función recibe como parámetro el número de resultados que se desean obtener.
@@ -61,7 +61,7 @@ función recibe como parámetro el número de resultados que se desean obtener.
 { "name" : "Obi-Wan Kenobi" }
 {% endhighlight %}
 
-###Omitir 'n' resultados
+### Omitir 'n' resultados
 
 Para omitir 'n' resultados de una consulta se emplea la función *skip()*. Esta función recibe como
 parámetro el número de resultados que se desean omitir.
@@ -81,7 +81,7 @@ Las funciones *limit()* y *skip()* se pueden combinar para acotar el resultado d
 { "name" : "Han Solo" }
 {% endhighlight %}
 
-###Filtrar arrays
+### Filtrar arrays
 
 La naturaleza polimórfica de MongoDB también permite filtrar por los valores contenidos en un campo
 de tipo array como si fuese un simple string. Por ejemplo, teniendo un documento como este:
@@ -104,7 +104,7 @@ se podría hacer una búsqueda con el siguiente filtro:
 
 Es decir, MongoDB comprobará si el valor del filtro está contenido en el array.
 
-###Filtrar documentos anidados
+### Filtrar documentos anidados
 
 Dado que es posible que un documento contenga otros documentos anidados, es posible también realizar
 búsquedas en función de los valores de dichos documentos anidados.
@@ -138,7 +138,7 @@ los nombres de los campos, en este caso es necesario emplearlas para evitar un e
 2015-08-13T10:44:02.086+0200 E QUERY    SyntaxError: Unexpected token .
 {% endhighlight %}
 
-###Conclusión
+### Conclusión
 
 Estas son las principales opciones de búsqueda que ofrece MongoDB. Todas ellas se pueden combinar entre sí,
 dando como resultado un conjunto muy potente de herramientas para explotar la información de la base de datos
