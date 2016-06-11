@@ -16,6 +16,7 @@ body {
     margin-bottom: 40px;
     
     ul {
+        margin-top: 10px;
         margin-left: 0;
         list-style: none;
         > li {
@@ -50,8 +51,10 @@ body {
 .tagcloud {
     margin-bottom: $spacing-unit;
     
-    h4 {
-        color: $grey-color;
+    a {
+        font-size: 18px;
+        margin-bottom: 5px;
+        text-decoration: none;
     }
 }
 

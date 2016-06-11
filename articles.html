@@ -2,11 +2,15 @@
 layout: page
 permalink: /articles/
 ---
+{% include tagcloud.html %}
+{% for tag in site.tags %}
+<h3 id="{{ tag | first | slugize }}">{{ tag | first | slugize }}</h3>
 <ul class="post-list">
-  {% for post in site.posts %}
+  {% for post in tag[1] %}
     <li>
       <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><h4>{{ post.title }}</h4></a>
     </li>
   {% endfor %}
 </ul>
+{% endfor %}
