@@ -1,5 +1,4 @@
 <div class="tagcloud">
-  <h4>Etiquetas</h4>
   {% for tag in site.tags %}
     <a class="btn btn-default" href="/articles/#{{ tag | first | slugize }}" role="button">
       {{ tag | first }}
