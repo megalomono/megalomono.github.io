@@ -2,7 +2,7 @@
 layout: post
 title: "Montando una wiki con Sinatra"
 date: 2015-10-26
-tags: Ruby Sinatra Markdown
+tags: Ruby Markdown
 ---
 Sinatra es un micro-framework escrito en Ruby que permite crear aplicaciones web con muy pocas líneas de código. Si se combina con Markdown, se
 puede crear muy fácilmente una pequeña aplicación capaz de parsear ficheros .md y hacerlos accesibles a través del navegador.
