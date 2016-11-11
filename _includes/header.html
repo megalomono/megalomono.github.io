@@ -1,21 +1,15 @@
 <header class="site-header">
-  <!--
-  <div class="text-center">
-    <a class="page-link" href="{{ "/profile" | prepend: site.baseurl }}" title="Yo">
-      <img src="{{ "/img/me.jpg" | prepend: site.baseurl }}" width="230" alt="Yo" class="img-responsive">
-    </a>
-  </div>
-  -->
   <div class="row">
     <div class="col-md-8">
       <h1><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
     </div>
     <div class="col-md-4">
       <ul class="text-right">
-        <li><a href="{{ "/articles" | prepend: site.baseurl }}" title="Artículos"><i class="fa fa-book fa-lg"></i></a></li>
-        <!--<li><a href="#" title="Linkedin"><i class="fa fa-linkedin fa-lg"></i></a></li>-->
-        <li><a href="https://github.com/{{ site.github_username }}" title="Github"><i class="fa fa-github fa-lg"></i></a></li>
-        <li><a class="page-link" href="{{ "/feed.xml" | prepend: site.baseurl }}" title="Feed"><i class="fa fa-rss fa-lg"></i></a></li>
+        <li><a href="{{ "/articles" | prepend: site.baseurl }}" title="Artículos" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-book fa-lg"></i></a></li>
+        <li><a href="{{ "/tags" | prepend: site.baseurl }}" title="Tags" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-tags fa-lg"></i></a></li>
+        <!--<li><a href="#" title="Linkedin" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin fa-lg"></i></a></li>-->
+        <li><a href="https://github.com/{{ site.github_username }}" title="Github"data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a class="page-link" href="{{ "/feed.xml" | prepend: site.baseurl }}" title="Feed" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-rss fa-lg"></i></a></li>
       </ul>
     </div>
   </div>

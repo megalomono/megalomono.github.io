@@ -1,0 +1,15 @@
+1.- descargarse tomcat de la web
+2.- descomprimir y establecer variable de entorno CATALINA_HOME
+3.- comprobar arranque
+4.- Cambiar puerto por defecto al 80
+On a Linux Debian-based (so Ubuntu included) you have also to go to /etc/default/tomcat7, uncomment the #AUTHBIND=no line and set its value to 'yes', in order to let the server bind on a privileged port.
+apt-get install authbind
+
+ejecutar como administrador (linux)
+
+5.- establecer usuario con rol "manager-gui" para poder acceder al tomcat-manager
+6.- Ojo! Enkeli necesita Java 1.6 como máximo; Spring 2.5.6 no funciona con versiones superiores.
+7.- Crear certificado: keytool -genkey -alias tomcat -keyalg RSA -keystore /home/aleksav/mykeystore (linux)
+8.- Configurar conector en Tomcat
+9.- En el web.xml de cada aplicación hay que indicarle que emplee SSL
+10.- Tapestry -> BaseURLSource: clase que reescribe la base de la URL. Revisar para que funcione con HTTPS

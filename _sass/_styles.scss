@@ -9,6 +9,32 @@ body {
 } 
 
 /**
+ * Index style
+ */
+.splash-page{
+
+    ul {
+        margin-top: 10px;
+        list-style: none;
+        > li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+    }
+    
+    a {
+        text-decoration: none;
+        &,
+        &:visited {
+            color: $grey-color;
+        }
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+/**
  * Site header
  */
 .site-header {
