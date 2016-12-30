@@ -13,7 +13,7 @@ Este ciclo miserable no hace sino desequilibrarse con el tiempo: la capacidad de
 aumenta hacia cotas insospechadas, hasta llegar a ese momento en el que alguien dice aquello de "hay que rehacer esto desde cero"*.
 
 En este punto hay que hacer un ejercicio de sinceridad y asumir que el software no se degrada por sí solo. No es un componente físico que se deteriore con el tiempo.
-El software tiende hacia la entropía, es cierto, pero el único agente entrópico en este mundillo es el propio desarrollador. La parte buena de esto es que es barato impedir
+El software tiende hacia el desorden, es cierto, pero el único agente entrópico en este mundillo es el propio desarrollador. La parte buena de esto es que es barato impedir
 la degradación del software; la parte mala es que depende de la disciplina del programador.
 
 La ingeniería del software dispone de varias herramientas para ayudar en este problema. La más conocida son los patrones de diseño, muchos de los cuales están descritos en el
