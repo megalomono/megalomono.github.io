@@ -8,18 +8,13 @@ layout: default
       <header class="post-header">
         <h2 class="post-title">{{ page.title }}</h2>
         <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+        {% for tag in page.tags %}
+          <a class="btn btn-default" href="/tags/#{{ tag }}" role="button">{{ tag }}</a>
+        {% endfor %}
       </header>
-
       <article class="post-content">
         {{ content }}
-      </article>
-
-      <div>
-        <strong>Etiquetas:</strong> 
-        {% for tag in page.tags %}
-          <a href="/tags/#{{ tag }}">{{ tag }}</a>
-        {% endfor %}
-      </div>
+      </article>      
     </div>
     {% include footer.html %}
   </div>
