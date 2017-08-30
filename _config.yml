@@ -2,8 +2,11 @@
 title: Fonso's web of holding
 email: fonsopp@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Este es mi bloc de notas particular. No garantizo
-  coherencia, así que lee bajo tu cuenta y riesgo.
+  I currently work as software engineer at Health in Code. 
+  My expertise covers the planning and execution of software projects
+  through all the development stages, encouraging short delivery cycles.
+  I'm mainly interested in the application of engineering principles
+  and good practices, always oriented to produce easily maintainable code.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://megalomono.github.io" # the base hostname & protocol for your site
 github_username:  megalomono
